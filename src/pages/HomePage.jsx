@@ -57,21 +57,6 @@ export const HomePage = () => {
           <span className="font-bold ">Buy Now</span>
         </button>
 
-        {/* <div className=" absolute md:left-[30%] flex gap-8 justify-center  -bottom-14">
-          <div className="flex flex-col bg-gray-500 text-white w-[140px] h-[60px] p-1 rounded-lg font-semibold">
-            <h2 className="text-xl">Silver</h2>
-            <span className="text-md">Membership</span>
-          </div>
-          <div className="flex flex-col bg-[#E0A93F] text-white w-[140px] h-[60px] p-1 rounded-lg font-semibold">
-            <h2 className="text-xl">Gold</h2>
-            <span className="text-md">Membership</span>
-          </div>
-          <div className="flex flex-col bg-[#5963E4] text-white w-[140px] h-[60px] p-1 rounded-lg font-semibold">
-            <h2 className="text-xl">Diamond</h2>
-            <span className="text-md">Membership</span>
-          </div>
-        </div> */}
-
         <div className=" absolute  md:left-[30%] flex justify-center gap-8 -bottom-14">
           <div className="flex flex-col bg-gray-500 text-white w-[140px] h-[60px] md:w-[220px] md:h-[120px]  p-1 rounded-lg font-semibold">
             <h2 className="text-xl md:text-2xl">Silver</h2>
@@ -302,75 +287,3 @@ export const HomePage = () => {
     </div>
   );
 };
-
-// import { useEffect, useState } from "react";
-// import axios from "axios";
-
-// const RestaurantList = () => {
-//   const [restaurants, setRestaurants] = useState([]);
-//   const [error, setError] = useState(null);
-
-//   useEffect(() => {
-//     const fetchRestaurants = async () => {
-//       const token =
-//         "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjBhNDY4NmQzLWRhNDctNDZkYi04OWEzLTY4MDk5NzgyZmVkNyIsInN1YiI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImp0aSI6ImQ1MDZjYzE3LTllM2EtNDc1Yi1iOTE4LWI3YTI3ZjM1MTczYyIsInJvbGUiOiJVc2VyIiwibmJmIjoxNzMzMjQ3ODYwLCJleHAiOjE3MzMyNTE0NjAsImlhdCI6MTczMzI0Nzg2MCwiaXNzIjoiaHR0cHM6Ly93d3cucmFubmEuY29tLnRyIiwiYXVkIjoiaHR0cHM6Ly93d3cucmFubmEuY29tLnRyLyJ9.6JYxj6FDg3_yHpfqAVPhGuIL0LBM_xonNimKAz2urOkyDY4n4Wj-qVG7NWGJ0keQDe_fldoYHhOfl9z8VYoDXQ";
-//       const url = "https://localhost:44359/api/Restaurant/GetAll";
-
-//       try {
-//         const response = await axios.get(url, {
-//           headers: {
-//             Authorization: `Bearer ${token}`,
-//           },
-//         });
-
-//         setRestaurants(response.data);
-//       } catch (err) {
-//         setError("API çağrısı sırasında bir hata oluştu");
-//         console.error(err);
-//       }
-//     };
-
-//     const fetchRestaurant = async (id) => {
-//       const token =
-//         "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjBhNDY4NmQzLWRhNDctNDZkYi04OWEzLTY4MDk5NzgyZmVkNyIsInN1YiI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImp0aSI6ImQ1MDZjYzE3LTllM2EtNDc1Yi1iOTE4LWI3YTI3ZjM1MTczYyIsInJvbGUiOiJVc2VyIiwibmJmIjoxNzMzMjQ3ODYwLCJleHAiOjE3MzMyNTE0NjAsImlhdCI6MTczMzI0Nzg2MCwiaXNzIjoiaHR0cHM6Ly93d3cucmFubmEuY29tLnRyIiwiYXVkIjoiaHR0cHM6Ly93d3cucmFubmEuY29tLnRyLyJ9.6JYxj6FDg3_yHpfqAVPhGuIL0LBM_xonNimKAz2urOkyDY4n4Wj-qVG7NWGJ0keQDe_fldoYHhOfl9z8VYoDXQ";
-//       const url = `https://localhost:44359/api/Restaurant/GetDetail?id=${id}`;
-
-//       try {
-//         const response = await axios.get(url, {
-//           headers: {
-//             Authorization: `Bearer ${token}`,
-//           },
-//         });
-
-//         console.log(response.data);
-//       } catch (err) {
-//         setError("API çağrısı sırasında bir hata oluştu");
-//         console.error(err);
-//       }
-//     };
-//     fetchRestaurant("fbb75a67-c0cf-404c-84ef-078dc6ded431");
-//     fetchRestaurants();
-//   }, []);
-
-//   return (
-//     <div>
-//       <h1>Restaurant Listesi</h1>
-//       {error && <p style={{ color: "red" }}>{error}</p>}
-//       <ul>
-//         {restaurants.map((restaurant) => (
-//           <li key={restaurant.id}>
-//             <h3>{restaurant.name}</h3>
-//             <p>{restaurant.categoryName}</p>
-//             <img
-//               src={`https://localhost:44359${restaurant.imageURL}`}
-//               alt={restaurant.name}
-//               style={{ width: "100px", height: "100px" }}
-//             />
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default RestaurantList;
