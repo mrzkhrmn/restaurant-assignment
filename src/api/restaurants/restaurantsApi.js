@@ -18,3 +18,13 @@ export const fetchRestaurantById = async (id) => {
     throw error;
   }
 };
+
+export const fetchAddRestaurant = async () => {
+  try {
+    const response = await axiosInstance.get(`/Restaurant/Add`);
+    return response.data;
+  } catch (error) {
+    console.error(error.message);
+    throw error;
+  }
+};

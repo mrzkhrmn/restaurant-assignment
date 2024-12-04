@@ -23,10 +23,10 @@ export const Header = () => {
         <h3 className="text-xl text-[#00A79D] font-bold">Fun & Save</h3>
       </div>
       <nav className="bg-[#00A79D] flex items-center text-3xl text-white pl-2 pr-10 py-1 rounded-xl gap-3 relative">
-        <Link>
+        <Link to={"/"}>
           <MdHome />
         </Link>
-        <Link>
+        <Link to={"/add-restaurant"}>
           <IoFolderOutline size={24} />
         </Link>
         <Link>
