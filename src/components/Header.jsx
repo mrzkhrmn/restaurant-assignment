@@ -17,7 +17,7 @@ export const Header = () => {
     }
   };
   return (
-    <header className=" max-w-7xl mx-auto flex items-center justify-between py-4">
+    <header className=" max-w-7xl mx-auto flex items-center justify-between py-4 px-10 md:px-0">
       <div className="flex flex-col justify-center items-center text line">
         <h3 className="text-lg text-red-500 font-bold">Türkiye</h3>
         <h3 className="text-xl text-[#00A79D] font-bold">Fun & Save</h3>

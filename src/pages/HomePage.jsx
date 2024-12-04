@@ -48,27 +48,42 @@ export const HomePage = () => {
           alt=""
           className="w-full object-cover object-bottom h-[675px] z-10"
         />
-        <h1 className="text-white font-bold absolute top-[40%] left-[10%] w-[580px] flex flex-col gap-1 z-20">
-          <span className="text-6xl">Explore Türkiye </span>
-          <span className="text-5xl">& Save in best places!</span>
+        <h1 className="text-white font-bold absolute top-[50%] md:top-[40%] left-[10%] w-[580px] flex flex-col gap-1 z-20">
+          <span className="text-4xl md:text-6xl">Explore Türkiye </span>
+          <span className="text-3xl md:text-5xl">& Save in best places!</span>
         </h1>
         <button className="absolute left-[90%] top-[50%] bg-[#00A79D] text-white z-20 flex items-center rounded-lg pl-2 pr-4 py-1 text-xl w-44 gap-2">
           <TbShoppingBagPlus size={32} />
           <span className="font-bold ">Buy Now</span>
         </button>
 
-        <div className=" absolute left-[22%] lg:left-[30%] flex gap-8 -bottom-14">
-          <div className="flex flex-col bg-gray-500 text-white w-[220px] h-[120px] p-2 rounded-lg font-semibold">
-            <h2 className="text-2xl">Silver</h2>
-            <span className="text-lg">Membership</span>
+        {/* <div className=" absolute md:left-[30%] flex gap-8 justify-center  -bottom-14">
+          <div className="flex flex-col bg-gray-500 text-white w-[140px] h-[60px] p-1 rounded-lg font-semibold">
+            <h2 className="text-xl">Silver</h2>
+            <span className="text-md">Membership</span>
           </div>
-          <div className="flex flex-col bg-[#E0A93F] text-white w-[220px] h-[120px] p-2 rounded-lg font-semibold">
-            <h2 className="text-2xl">Gold</h2>
-            <span className="text-lg">Membership</span>
+          <div className="flex flex-col bg-[#E0A93F] text-white w-[140px] h-[60px] p-1 rounded-lg font-semibold">
+            <h2 className="text-xl">Gold</h2>
+            <span className="text-md">Membership</span>
           </div>
-          <div className="flex flex-col bg-[#5963E4] text-white w-[220px] h-[120px] p-2 rounded-lg font-semibold">
-            <h2 className="text-2xl">Diamond</h2>
-            <span className="text-lg">Membership</span>
+          <div className="flex flex-col bg-[#5963E4] text-white w-[140px] h-[60px] p-1 rounded-lg font-semibold">
+            <h2 className="text-xl">Diamond</h2>
+            <span className="text-md">Membership</span>
+          </div>
+        </div> */}
+
+        <div className=" absolute  md:left-[30%] flex justify-center gap-8 -bottom-14">
+          <div className="flex flex-col bg-gray-500 text-white w-[140px] h-[60px] md:w-[220px] md:h-[120px]  p-1 rounded-lg font-semibold">
+            <h2 className="text-xl md:text-2xl">Silver</h2>
+            <span className="text-md md:text-lg">Membership</span>
+          </div>
+          <div className="flex flex-col bg-[#E0A93F] text-white w-[140px] h-[60px] md:w-[220px] md:h-[120px] p-1 rounded-lg font-semibold">
+            <h2 className="text-xl md:text-2xl">Gold</h2>
+            <span className="text-md md:text-lg">Membership</span>
+          </div>
+          <div className="flex flex-col bg-[#5963E4] text-white w-[140px] h-[60px] md:w-[220px] md:h-[120px] p-1 rounded-lg font-semibold">
+            <h2 className="text-xl md:text-2xl">Diamond</h2>
+            <span className="text-md md:text-lg">Membership</span>
           </div>
         </div>
       </div>
@@ -108,7 +123,7 @@ export const HomePage = () => {
             ))}
           </select>
         </div>
-        <div className="grid grid-cols-2 gap-y-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-12">
           {filteredRestaurants?.map((restaurant) => (
             <Link
               to={`/restaurant/${restaurant.id}`}
@@ -133,12 +148,12 @@ export const HomePage = () => {
           <img
             src="https://s3-alpha-sig.figma.com/img/db7f/be3a/f265054431e7ec4dbd18159573eaed5b?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Syx8xJKfJxRUAokOwBjDiQz60QloPiZ2cQRVIp4JeIpwWybmFo88iytEY7vHEihFf-asZKGVnTFDXmfYoVmvo7QbeTRbSg5nAOWWmAjBSg03SzpDgr9VWr4FVQISMKyAM~P16FXIFOvvZRH0zZkfVr48igygCgumgUpzRJWRiPzdsYlT~r7oco9mQX0M1MCCFqzvKa9mxg3Co4Nw6dQw2hgZpcCOBhTpMo~mj9Upo71HekKJn4BBG25a1CRBY15mxjhR7lZ1zTeTNmoRjDuqknYPoiPXnOdxE5m7WAnThy934K8nD3LD6q9ACYPMXeIeZqJvYsA8qKjJwBmfr3u6TQ__"
             alt=""
-            className="h-full"
+            className="h-full hidden md:block"
           />
           <img
             src="https://s3-alpha-sig.figma.com/img/db7f/be3a/f265054431e7ec4dbd18159573eaed5b?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Syx8xJKfJxRUAokOwBjDiQz60QloPiZ2cQRVIp4JeIpwWybmFo88iytEY7vHEihFf-asZKGVnTFDXmfYoVmvo7QbeTRbSg5nAOWWmAjBSg03SzpDgr9VWr4FVQISMKyAM~P16FXIFOvvZRH0zZkfVr48igygCgumgUpzRJWRiPzdsYlT~r7oco9mQX0M1MCCFqzvKa9mxg3Co4Nw6dQw2hgZpcCOBhTpMo~mj9Upo71HekKJn4BBG25a1CRBY15mxjhR7lZ1zTeTNmoRjDuqknYPoiPXnOdxE5m7WAnThy934K8nD3LD6q9ACYPMXeIeZqJvYsA8qKjJwBmfr3u6TQ__"
             alt=""
-            className="h-full"
+            className="h-full hidden md:block"
           />
           <img
             src="https://s3-alpha-sig.figma.com/img/db7f/be3a/f265054431e7ec4dbd18159573eaed5b?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Syx8xJKfJxRUAokOwBjDiQz60QloPiZ2cQRVIp4JeIpwWybmFo88iytEY7vHEihFf-asZKGVnTFDXmfYoVmvo7QbeTRbSg5nAOWWmAjBSg03SzpDgr9VWr4FVQISMKyAM~P16FXIFOvvZRH0zZkfVr48igygCgumgUpzRJWRiPzdsYlT~r7oco9mQX0M1MCCFqzvKa9mxg3Co4Nw6dQw2hgZpcCOBhTpMo~mj9Upo71HekKJn4BBG25a1CRBY15mxjhR7lZ1zTeTNmoRjDuqknYPoiPXnOdxE5m7WAnThy934K8nD3LD6q9ACYPMXeIeZqJvYsA8qKjJwBmfr3u6TQ__"
@@ -147,7 +162,7 @@ export const HomePage = () => {
           />
         </div>
         <div className="bg-[#00A79D]/85  w-full h-full z-50 flex items-center justify-center gap-56">
-          <div className="flex flex-col w-[38%] gap-4">
+          <div className="flex flex-col w-full md:w-[38%] gap-4 px-2 md:px-0">
             <h1 className="text-3xl text-white font-bold">
               Choose Your Membership & Start Saving
             </h1>
@@ -161,7 +176,7 @@ export const HomePage = () => {
           <img
             src="https://s3-alpha-sig.figma.com/img/4e3c/263a/de8e75860cceb73325252abafa0fe8c4?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TGPCTd1fFXAkyc01jeocN-1H9z5LfXOewwY9EMyjpsfBYsmtL7c-rEXhegHk4YbWGL-j1CBsmHGtGfnq5jd0wQaNwh6zGovwUGfoUydy5vf4p~6scM1l3jaE~MuSIAu4FHjJSB6NcCrK~hR964lagpivIsRc9e0uOmdbn84e8p9lWH0kpd5gQJeyuLiensZk9p7qK1jxRtYVXjBfE7WHqHtl3ipX3wxo5736H5d~ab5wNDjeWUgo9jqghhpy2YyuUP-iCgN1OucjN4b69ftbmtnWDtjyV7IMwRZ10-sMotCRTRKytdgH5L7ElPBBzk0QnjJxwrOpUb25OdEgKTrd1Q__"
             alt=""
-            className="h-[100%] object-contain object-center"
+            className="h-[100%] object-contain object-center hidden md:block"
           />
         </div>
       </div>
@@ -172,7 +187,7 @@ export const HomePage = () => {
             <MdFilterList size={35} />
           </button>
         </div>
-        <div className="grid grid-cols-2 gap-y-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-12">
           <div className="cursor-pointer w-[500px] h-[200px]">
             <img
               className="h-full w-full object-cover object-center overflow-hidden rounded-lg"
@@ -231,21 +246,21 @@ export const HomePage = () => {
           <img
             src="https://s3-alpha-sig.figma.com/img/db7f/be3a/f265054431e7ec4dbd18159573eaed5b?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Syx8xJKfJxRUAokOwBjDiQz60QloPiZ2cQRVIp4JeIpwWybmFo88iytEY7vHEihFf-asZKGVnTFDXmfYoVmvo7QbeTRbSg5nAOWWmAjBSg03SzpDgr9VWr4FVQISMKyAM~P16FXIFOvvZRH0zZkfVr48igygCgumgUpzRJWRiPzdsYlT~r7oco9mQX0M1MCCFqzvKa9mxg3Co4Nw6dQw2hgZpcCOBhTpMo~mj9Upo71HekKJn4BBG25a1CRBY15mxjhR7lZ1zTeTNmoRjDuqknYPoiPXnOdxE5m7WAnThy934K8nD3LD6q9ACYPMXeIeZqJvYsA8qKjJwBmfr3u6TQ__"
             alt=""
-            className="h-full"
+            className="h-full hidden md:block"
           />
           <img
             src="https://s3-alpha-sig.figma.com/img/db7f/be3a/f265054431e7ec4dbd18159573eaed5b?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Syx8xJKfJxRUAokOwBjDiQz60QloPiZ2cQRVIp4JeIpwWybmFo88iytEY7vHEihFf-asZKGVnTFDXmfYoVmvo7QbeTRbSg5nAOWWmAjBSg03SzpDgr9VWr4FVQISMKyAM~P16FXIFOvvZRH0zZkfVr48igygCgumgUpzRJWRiPzdsYlT~r7oco9mQX0M1MCCFqzvKa9mxg3Co4Nw6dQw2hgZpcCOBhTpMo~mj9Upo71HekKJn4BBG25a1CRBY15mxjhR7lZ1zTeTNmoRjDuqknYPoiPXnOdxE5m7WAnThy934K8nD3LD6q9ACYPMXeIeZqJvYsA8qKjJwBmfr3u6TQ__"
             alt=""
-            className="h-full"
+            className="h-full hidden md:block"
           />
           <img
             src="https://s3-alpha-sig.figma.com/img/db7f/be3a/f265054431e7ec4dbd18159573eaed5b?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Syx8xJKfJxRUAokOwBjDiQz60QloPiZ2cQRVIp4JeIpwWybmFo88iytEY7vHEihFf-asZKGVnTFDXmfYoVmvo7QbeTRbSg5nAOWWmAjBSg03SzpDgr9VWr4FVQISMKyAM~P16FXIFOvvZRH0zZkfVr48igygCgumgUpzRJWRiPzdsYlT~r7oco9mQX0M1MCCFqzvKa9mxg3Co4Nw6dQw2hgZpcCOBhTpMo~mj9Upo71HekKJn4BBG25a1CRBY15mxjhR7lZ1zTeTNmoRjDuqknYPoiPXnOdxE5m7WAnThy934K8nD3LD6q9ACYPMXeIeZqJvYsA8qKjJwBmfr3u6TQ__"
             alt=""
-            className="h-full"
+            className="h-full "
           />
         </div>
         <div className="bg-[#0D56AB]/85  w-full h-full z-50 flex items-center justify-center gap-56">
-          <div className="flex flex-col w-[38%] gap-4">
+          <div className="flex flex-col w-full md:w-[38%] gap-4 px-2 md:px-0">
             <h1 className="text-3xl text-white font-bold">How Does it Work?</h1>
             <p className="text-white text-lg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
@@ -257,7 +272,7 @@ export const HomePage = () => {
           <img
             src="https://s3-alpha-sig.figma.com/img/4e3c/263a/de8e75860cceb73325252abafa0fe8c4?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TGPCTd1fFXAkyc01jeocN-1H9z5LfXOewwY9EMyjpsfBYsmtL7c-rEXhegHk4YbWGL-j1CBsmHGtGfnq5jd0wQaNwh6zGovwUGfoUydy5vf4p~6scM1l3jaE~MuSIAu4FHjJSB6NcCrK~hR964lagpivIsRc9e0uOmdbn84e8p9lWH0kpd5gQJeyuLiensZk9p7qK1jxRtYVXjBfE7WHqHtl3ipX3wxo5736H5d~ab5wNDjeWUgo9jqghhpy2YyuUP-iCgN1OucjN4b69ftbmtnWDtjyV7IMwRZ10-sMotCRTRKytdgH5L7ElPBBzk0QnjJxwrOpUb25OdEgKTrd1Q__"
             alt=""
-            className="h-[100%] object-contain object-center"
+            className="h-[100%] object-contain object-center hidden md:block"
           />
         </div>
       </div>
@@ -266,7 +281,7 @@ export const HomePage = () => {
           <img
             src="https://s3-alpha-sig.figma.com/img/57f8/b9a4/e129ef4079ff04e9f1d019015642e97d?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hMDWxbSA6y5oCmiVU3NsBFvQMYEiBo0ePZYoa4XumEKRyq79UoMQj~3OMubWXFzInDrYMekOziPpWg8WJgEwcyA4zQ-q9SWrYsKweSeZWoHRT3Ph~-6iBa9P0RsEkRYWDg~TrEBzEcWEPZ0WtVVqaJavmlp6BgYaa4oQ~iuS-5rtmC9GJnvqmqgrdN1xw25YwrNJPnneJkl8HRvEMHEH5zw8Lmx0VPfKJeCM1ioTwBbNVJxABLHaYYR~3C2yAWIgul1mEiV5lC45rue8QDucnMpOeaJFpZUQHF25PQ-ani9Edp~UCSd7wic6gDgd~yn2KNnl6Axosf2unMrq8O~ccg__"
             alt=""
-            className="h-[100%] object-contain object-center border-4 rounded-xl overflow-hidden border-black"
+            className="h-[100%] object-contain object-center border-4 rounded-xl overflow-hidden border-black hidden md:block"
           />
           <div className="flex flex-col w-[38%] gap-4">
             <p className=" text-lg">
@@ -278,7 +293,7 @@ export const HomePage = () => {
             <img
               src="https://s3-alpha-sig.figma.com/img/8378/ae23/b9e291adea71fafa6f1d086f633f3cb6?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QLG4V4jIAYbofd0wROMtlPPPL4jVKwJUvudx~DCteFSmlTc-SGaNkfHi3oQmM~VeI6WC10zDaJ2N2nZycr3wHOsQqicW5BZjTY-qpx7Dxdz3Lru0oNAel3naqG0n~IOXuPQQbhLkRnL3voM4pnWuEuV0xoSrfO8PQTNpJekLZ4--oVfz-X9fRRKDo~DAFfK4tL2a~W8O32y~ChhKRxsDNo-UPtrSX19Vw6SBlplF9hCOlP8f2JCIvdMGR2f5JhoWxMX-AvBDPPjUiCD3PFLCYMVOjkV7Pcjcn2B5uF2k0C1G1Mr-4Y66Ap0IKrODvwMajhKwqAADxvHKsdHKag1HcA__"
               alt=""
-              className="w-[25%]"
+              className="w-[65%] md:w-[25%]"
             />
           </div>
         </div>
